@@ -9,10 +9,10 @@ public class PETimeTake
     public int tid;
 
     // 目标时间
-    public float destTime;
+    public double destTime;
 
     // 事件间隔时间
-    public float delayTime;
+    public double delayTime;
 
     // 回调事件
     public Action callback;

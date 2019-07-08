@@ -124,9 +124,9 @@ public class TimeSystem : ITimeSystem
     /// <param name="destTime">Destination time.</param>
     /// <param name="callback">Callback.</param>
     /// <param name="count">count = 0表示一直循环.</param>
-    public int AddTimeTake(float destTime, float delayTime, Action callback = null ,PETimeUnit unit = PETimeUnit.Millisecond ,int count = 1)
+    public int AddTimeTake(double destTime, double delayTime, Action callback = null ,PETimeUnit unit = PETimeUnit.Millisecond ,int count = 1)
     {
-        float time = 0;
+        double time = 0;
         switch (unit)
         {
             case PETimeUnit.Millisecond:
@@ -149,7 +149,7 @@ public class TimeSystem : ITimeSystem
                 break;
         }
 
-        float dest = Time.realtimeSinceStartup * 1000 + time;
+        double dest = Time.realtimeSinceStartup * 1000 + time;
         int tid = GetTid();
         PETimeTake take = new PETimeTake
         {
@@ -189,10 +189,10 @@ public class TimeSystem : ITimeSystem
     /// <summary>
     /// 替换时间回调事件
     /// </summary>
-    public bool ReplaceTimeTake(int tid, float destTime, float delayTime, Action callback = null, PETimeUnit unit = PETimeUnit.Millisecond, int count = 1)
+    public bool ReplaceTimeTake(int tid, double destTime, double delayTime, Action callback = null, PETimeUnit unit = PETimeUnit.Millisecond, int count = 1)
     {
         bool isReplace = false;
-        float time = 0;
+        double time = 0;
         switch (unit)
         {
             case PETimeUnit.Millisecond:
@@ -215,7 +215,7 @@ public class TimeSystem : ITimeSystem
                 break;
         }
 
-        float dest = Time.realtimeSinceStartup * 1000 + time;
+        double dest = Time.realtimeSinceStartup * 1000 + time;
         PETimeTake take = new PETimeTake
         {
             tid = tid,

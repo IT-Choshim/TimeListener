@@ -61,8 +61,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\GameRoot.cs" />
+    <Compile Include="Assets\Scripts\GameRootNo.cs" />
     <Compile Include="Assets\Scripts\ITimeSystem.cs" />
-    <Compile Include="Assets\Scripts\PETime.cs" />
+    <Compile Include="Assets\Scripts\PETimer.cs" />
     <Compile Include="Assets\Scripts\PETimeTake.cs" />
     <Compile Include="Assets\Scripts\TimeSystem.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">

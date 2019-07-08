@@ -8,7 +8,7 @@ public interface ITimeSystem
     /// <param name="destTime">Destination time.</param>
     /// <param name="callback">Callback.</param>
     /// <param name="count">count = 0表示一直循环.</param>
-    int AddTimeTake(float destTime, float delayTime, Action callback = null, PETimeUnit unit = PETimeUnit.Millisecond, int count = 1);
+    int AddTimeTake(double destTime, double delayTime, Action callback = null, PETimeUnit unit = PETimeUnit.Millisecond, int count = 1);
 
 
     /// <summary>
@@ -21,7 +21,7 @@ public interface ITimeSystem
     /// <summary>
     /// 替换时间回调事件
     /// </summary>
-    bool ReplaceTimeTake(int tid, float destTime, float delayTime, Action callback = null, PETimeUnit unit = PETimeUnit.Millisecond, int count = 1);
+    bool ReplaceTimeTake(int tid, double destTime, double delayTime, Action callback = null, PETimeUnit unit = PETimeUnit.Millisecond, int count = 1);
 
 
 
